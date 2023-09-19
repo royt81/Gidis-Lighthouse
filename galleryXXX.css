@@ -1,0 +1,178 @@
+
+/* 
+body
+
+#homeButton
+#homeButton:hover
+#galleryPage
+
+.galleryPicture
+.dblClickText
+.headline
+.largePicturePage
+.displayPage
+.flexColumn
+
+*/
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+#homeButton{
+
+    grid-area: homeButton;
+    background-color: #a1a1a1;
+    height: 15vh;
+    border-radius: 9px;
+    width: 14vw;
+    border: 3px solid rgb(55, 51, 51);
+    
+    font-family: 'Oswald', sans-serif;
+    font-size:7vh;
+    font-weight: 600;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    background-color: #4e5252;
+    color: azure;
+    
+}
+
+#homeButton:hover{
+    background-color: blueviolet;
+    transition: 1s;
+}
+
+#galleryPage{
+    
+    height: 100%;
+    width: 100%;
+
+    background-image: linear-gradient(rgb(202, 197, 197), rgb(77, 77, 77));
+    background-size: cover;
+    overflow: scroll;
+
+    align-items: center;
+    justify-content: space-around;
+
+    display: grid;
+    grid-template-areas:
+    'head head head head head'
+    'homeButton homeButton homeButton homeButton homeButton';
+    grid-template-rows: repeat(auto, 30vh); 
+    gap: 5px;
+}
+
+.galleryPicture{
+    border-radius: 9px;
+    border: 3px solid rgb(55, 51, 51);
+    width: 14vw;
+
+}
+
+.dblClickText{
+
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 500;
+    text-align: center;
+
+    width: 30vw;
+    height: 15vh;
+
+    font-size: 6vh;
+    background-color: #b7dfdfa8;
+    color: rgb(71, 71, 59);
+
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.dblClickText:hover{
+    background-color: rgba(186, 52, 154, 0.789);
+    color: aliceblue;
+    cursor: pointer;
+    transition: 2s;
+}
+
+.headline{
+    grid-area: head;
+    height: 15vh;
+    background-color: #aab8b8;
+    border: 5px solid #383435;
+    border-radius: 5px;
+    color: rgb(237, 212, 216);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Oswald', sans-serif; */
+    font-family: 'Merriweather', serif;
+
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-weight: 400;
+    font-size: 7vh;
+
+    overflow: hidden;
+    
+    margin-top: 5vh;
+}
+
+.largePicturePage{
+    width: auto;
+    height: 100vh;
+    border: 3px solid rgb(47, 41, 43);
+
+    position: relative;
+    top: 3vh;
+    left: auto;
+}
+.displayPage{
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10vh 0 5vw;
+
+    gap: 5px;
+}
+
+@media only screen and (max-width: 600px){
+
+    .headline{
+        font-size: 100%;
+    }
+
+    #homeButton{
+        width: auto;
+    }
+    .dblClickText{
+        width: auto;
+    }
+    .largePicturePage{
+        width: 80%;
+        height: auto;
+    }
+    .galleryPicture{
+        border-radius: 1px;
+        border-radius: 5px;
+    }
+    
+}
+

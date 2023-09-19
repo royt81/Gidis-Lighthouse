@@ -1,0 +1,62 @@
+
+font
+/* 
+p
+body
+.container
+#homeButton 
+*/
+
+body{
+    background-image: linear-gradient(rgb(76, 78, 79), rgb(138, 186, 227));
+}
+
+.container{
+    
+    background-image: linear-gradient(rgb(183, 137, 64), rgb(123, 69, 6));
+
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+
+#homeButton{
+    background-color: #a1a1a1;
+    height: 15vh;
+    border-radius: 9px;
+    min-width: 15vw;
+    border: 5px solid rgb(55, 51, 51);
+    
+    /* font-family: 'Oswald', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    font-size:7vh;
+    font-weight: 600;
+
+    background-color: #364747;
+    color: azure;
+
+    margin-top: 5vh;
+}
+#homeButton:hover{
+    background-color: blueviolet;
+    transition: 2s;
+    cursor: pointer;
+}
+
+p{
+    width: 80%;
+    height: 80%;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 4vh;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 600px){
+    p{
+        font-size: 3vh;
+    }
+}

@@ -1,0 +1,205 @@
+
+
+/* 
+buttom
+
+body
+
+.background
+.blur
+.buttom
+.buttom > div
+#head
+#gallery
+.etsi
+.catalog
+
+@keyframes head
+
+ */
+
+
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+ }
+
+
+
+.background{
+    height: 100%;
+    width: 100%;
+
+    background-image: url('/images/BG032.jpg');
+    background-size: cover;
+
+    /* display: grid;
+    grid-template-areas: 
+    'head head head'
+    'gallery etsi catalog'; */
+
+    
+}
+.blur{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(146, 146, 146, 0.337);
+
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-around;
+}
+
+.buttom{
+    width: 90vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.buttom > div{
+    width: 27%;
+    height: 30vh;
+    border: 5px solid black;
+    border-radius: 10vh;
+} 
+
+#head{
+    grid-area: head;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(127, 255, 212, 0.547);
+    width: 90vw;
+    height: 30%;
+    font-size: 10vh;
+    color: rgba(6, 1, 33, 0.743);
+
+    border: 5px solid black;
+    border-radius: 25vh;
+
+    font-family: 'Poppins', sans-serif;
+
+    animation-name: head;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+}
+
+#head:hover{
+    width: 92vw;
+    height: 33%;
+    background-color: rgba(199, 126, 9, 0.879);
+    font-size: 10vh;
+    color: rgba(7, 6, 8, 0.743);
+    border: 5px solid black;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 2s;  
+}
+@keyframes head{
+    0% {background-color: rgba(255, 127, 80, 0.565); top: 0px;left: 0px;}
+    25%{background-color: rgba(0, 255, 255, 0.526); top: 0px; left: 5px;}
+    50%{background-color: rgba(222, 184, 135, 0.509); top: 5px; left: 5px;}
+    100%{background-color: cadetblue; top: 5px; left: 0px;}
+}
+
+.gallery{
+    text-align: center;
+    width: 100%;
+    grid-area: gallery;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: rgb(255, 255, 255);
+    font-family: 'Merriweather', serif;
+    font-size: 7vh;
+
+    background-color: rgba(127, 255, 212, 0.677);
+    /* background-image: url('./images/BG011.jpg');
+    background-size: cover; */
+}
+
+.gallery:hover{
+    color: rgb(106, 200, 78);
+    border: 5px solid rgba(66, 66, 66, 0.762);
+    transition: 2s;
+    cursor: pointer;
+    background-color: rgba(255, 228, 196, 0.772);
+}    
+
+.etsi{
+    grid-area: etsi;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    font-family: 'Oswald', sans-serif;
+    font-size: 7vh;
+    background-color: palevioletred;
+    text-align: center;
+}
+
+.etsi:hover{
+    cursor: pointer;
+    background-color: blueviolet;
+    color: aliceblue;
+    transition: 2s;
+    border: spx solid lightblue;
+}
+
+.catalog{
+    grid-area: catalog;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 5vh;
+
+    background-color: rgba(84, 237, 237, 0.76);
+}
+
+.catalog:hover{
+    cursor: pointer;
+    background-color: beige;
+    transition: 1s;
+    border: spx solid rgb(179, 237, 253);
+}
+
+@media only screen and (max-width: 600px){
+    #head{
+        font-size: 70%;
+        text-align: center;
+    }
+    .etsi{
+        text-align: center;
+        font-size: 80%;
+    }
+    .gallery{
+        font-size: 100%;
+        color: rgb(54, 55, 56);
+    }
+    .catalog{
+        font-size: 90%;
+    }
+}
+@media only screen and (max-width: 800px){
+    #head{
+        font-size: 100%;
+    }
+}
